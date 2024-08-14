@@ -16,5 +16,4 @@ public interface ProdutoService {
     ProdutoDetalhamentoDto listPorId(Long id);
     void excluir(Long id);
     public ProdutoDetalhamentoDto atualizar(Long id, ProdutoDetalhamentoDto dto);
-    // ProdutoDetalhamentoDto atualizar(Long id, HashMap<String, Object> updates) throws NoSuchFieldException, IllegalAccessException;
-}
+    }

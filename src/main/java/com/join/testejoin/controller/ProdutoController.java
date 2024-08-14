@@ -50,13 +50,6 @@ public class ProdutoController {
         return ResponseEntity.ok(categoriaDto);
     }
 
-  /*  @PatchMapping("/{id}")
-    public ResponseEntity<ProdutoDetalhamentoDto> atualizar(@PathVariable @NotNull Long id, @RequestBody HashMap<String, Object> updates)
-            throws NoSuchFieldException, IllegalAccessException {
-        var produtoDetalhamento = service.atualizar(id, updates);
-        return ResponseEntity.ok(produtoDetalhamento);
-    }*/
-
     @PutMapping("/{id}")
     public ResponseEntity<ProdutoDetalhamentoDto> atualizar(@PathVariable @NotNull Long id, @RequestBody @Valid ProdutoDetalhamentoDto dto) {
         var produtoDetalhamentoDtoDto = service.atualizar(id, dto);
