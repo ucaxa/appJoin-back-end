@@ -4,9 +4,10 @@ import com.join.testejoin.datasource.entity.Produto;
 
 import java.math.BigDecimal;
 
-public record ProdutoListagemDto(Long id, String nome, BigDecimal valor, Long categoriaId) {
+public record ProdutoListagemDto(Long id, String nome, BigDecimal valor, Long categoriaId, String categoriaNome) {
 
     public ProdutoListagemDto(Produto produto) {
-        this(produto.getId(), produto.getNome(), produto.getValor(), produto.getCategoria().getId());
+        this(produto.getId(), produto.getNome(), produto.getValor(),
+                produto.getCategoria().getId(), produto.getCategoria().getNome());
     }
 }
